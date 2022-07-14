@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Raindrop
+  - Ice
+  - NextLevel
+  - NextLoopLevel
+  - Ground
+  - Border
+  - Bug
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Raindrop
+  - Ice
+  - Bug
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 692353033
+    locked: 0
+  - name: Tiles
+    uniqueID: 3953156813
+    locked: 0
+  - name: Drops
+    uniqueID: 3974451711
+    locked: 0
+  - name: WaterLevelIndicator
+    uniqueID: 2750084913
+    locked: 0
+  - name: Player
+    uniqueID: 3071514505
+    locked: 0
