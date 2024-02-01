@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 public static class PlayerStats
 {
     public static float playerLevel;
@@ -11,4 +13,5 @@ public static class PlayerStats
     public static bool welcome;
     public static bool sinkhole;
     public static bool bugs;
+    public static bool menuActive;
 }
