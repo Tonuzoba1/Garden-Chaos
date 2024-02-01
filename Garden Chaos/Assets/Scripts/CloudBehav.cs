@@ -1,10 +1,12 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CloudBehav : MonoBehaviour
 {
     [SerializeField] private GameObject ice;
     [SerializeField] private GameObject raindrop;
+    public List<GameObject> drops = new List<GameObject>();
     [SerializeField] private Transform cloudTransform;
     [SerializeField] private bool newRaindropOnTheWay;
     [SerializeField] private bool newIceOnTheWay;
@@ -81,13 +83,13 @@ public class CloudBehav : MonoBehaviour
     {
         float raining = Random.Range(-34f, 34f);
 
-        Instantiate(raindrop,new Vector2(cloudTransform.position.x + raining, cloudTransform.position.y), Quaternion.identity);
+        drops.Add(Instantiate(raindrop,new Vector2(cloudTransform.position.x + raining, cloudTransform.position.y), Quaternion.identity));
     }
 
     void SpawnNewIcedrop()
     {
         float hail = Random.Range(-34f, 34f);
 
-        Instantiate(ice, new Vector2(cloudTransform.position.x + hail, cloudTransform.position.y), Quaternion.identity);
+       drops.Add(Instantiate(ice, new Vector2(cloudTransform.position.x + hail, cloudTransform.position.y), Quaternion.identity));
     }
 }

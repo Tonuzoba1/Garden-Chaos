@@ -110,6 +110,18 @@ public class PlayerBehav : MonoBehaviour
             Destroy(groundLevel);
             PlayerStats.playerLevel = 1f;
             PlayerStats.playerPoints += 1;
+            foreach (var drop in GameObject.FindObjectOfType<CloudBehav>().drops)
+            {
+                Destroy(drop);
+                
+            }
+
+            foreach (var bug in GameObject.FindObjectOfType<SpawnBugs>().bugs)
+            {
+                Destroy(bug);
+            }
+            GameObject.FindObjectOfType<SpawnBugs>().bugs.Clear();
+            GameObject.FindObjectOfType<CloudBehav>().drops.Clear();
 
         } else if (collision.tag == "NextLoopLevel")
         {
@@ -124,7 +136,17 @@ public class PlayerBehav : MonoBehaviour
             resetLevel = true;
             PlayerStats.playerLevel += 1f;
             PlayerStats.playerPoints += 1;
-
+            foreach (var drop in GameObject.FindObjectOfType<CloudBehav>().drops)
+            {
+                Destroy(drop);
+                
+            }
+            foreach (var bug in GameObject.FindObjectOfType<SpawnBugs>().bugs)
+            {
+                Destroy(bug);
+            }
+            GameObject.FindObjectOfType<SpawnBugs>().bugs.Clear();
+            GameObject.FindObjectOfType<CloudBehav>().drops.Clear();
         }
 
         if (collision.tag == "Raindrop")
@@ -175,7 +197,7 @@ public class PlayerBehav : MonoBehaviour
 
             }
 
-            Debug.Log("Kicseréltem " + PlayerStats.scores[minPos] + "-et " + PlayerStats.playerPoints + "-ra");
+            //Debug.Log("Kicseréltem " + PlayerStats.scores[minPos] + "-et " + PlayerStats.playerPoints + "-ra");
         }
 
         PlayerStats.playerLevel = 0;

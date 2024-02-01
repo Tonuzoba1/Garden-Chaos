@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnBugs : MonoBehaviour
@@ -6,6 +7,7 @@ public class SpawnBugs : MonoBehaviour
     [SerializeField] private Transform spawner1;
     [SerializeField] private Transform spawner2;
     [SerializeField] private GameObject bug;
+    public List<GameObject> bugs = new List<GameObject>();
     [SerializeField] public bool readyToSpawn;
     [SerializeField] private float spawnTime;
 
@@ -25,13 +27,13 @@ public class SpawnBugs : MonoBehaviour
         {
             case 0:
                 {
-                    Instantiate(bug, new Vector3(spawner1.position.x, spawner1.position.y, spawner1.position.z), Quaternion.identity);
+                   bugs.Add(Instantiate(bug, new Vector3(spawner1.position.x, spawner1.position.y, spawner1.position.z), Quaternion.identity));
 
                     break;
                 }
             case 1:
                 {
-                    Instantiate(bug, new Vector3(spawner2.position.x, spawner2.position.y, spawner2.position.z), Quaternion.identity);
+                    bugs.Add(Instantiate(bug, new Vector3(spawner2.position.x, spawner2.position.y, spawner2.position.z), Quaternion.identity));
 
                     break;
                 }
