@@ -16,7 +16,7 @@ public class PlayerBehav : MonoBehaviour
     [SerializeField] private GameObject petal;
     [SerializeField] private Transform petalSpawn;
     [SerializeField] private GameObject groundLevel;
-    [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D pointLight;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D pointLight;
     public CameraMovement cameraMovement;
     public float water;
     public Slider waterSlider;
